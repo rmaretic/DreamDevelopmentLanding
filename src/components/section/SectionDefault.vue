@@ -70,6 +70,8 @@ section {
                 -webkit-background-clip: text;
                 color: rgba(255, 255, 255, 0);
                 margin: 0 0 30px;
+                opacity: 0;
+                margin-left: -100px;
             }
             h3 {
                 background: linear-gradient(to right, #C368FF, #6AE6FF);
@@ -81,6 +83,8 @@ section {
             p {
                 font-size: 24px;
                 line-height: 1.6;
+                opacity: 0;
+                margin-left: 100px;
             }
             
         }
@@ -150,6 +154,7 @@ h2, p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    opacity: 0.4
 
     a {
         width: 100px;
@@ -180,14 +185,14 @@ h2, p {
 
 .animate {
     h2 {
-            animation: slide-in-left 1s ease;
+            animation: slide-in-left 1s ease both;
         }
 
         p {
-            animation: slide-in-right 1s ease;
+            animation: slide-in-right 1s ease both;
         }
         .icons {
-            animation: fade-in 1.5s ease
+            animation: fade-in 1.5s ease both;
         }
 }
 @keyframes slide-in-left {

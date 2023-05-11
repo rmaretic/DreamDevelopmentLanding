@@ -42,5 +42,6 @@ body {
 }
 
 section {
-    scroll-snap-align: start;
+    scroll-snap-align: center;
+    overflow: hidden;
 }

@@ -7,9 +7,9 @@
         description="Get to know the experts behind the Code."
         :scrollRef="firstMember"/>
     <section class="first-section">
-        <article ref="firstMember">
+        <article ref="firstMember" :class="{animate: isFirstMemberVisible}">
             <img class="profile-picture" src="/img/renato-maretic.jfif" alt="">
-            <div class="content" :class="{animate: isFirstMemberVisible}">
+            <div class="content">
                 <h2>Renato Maretić</h2>
                 <h3>Founder / Software Engineer</h3>
                 <p>
@@ -75,23 +75,26 @@ const { isTriggered: isFirstMemberVisible } = useElementVisibility(firstMember);
             font-size: 24px;
             line-height: 1.6;
         }
+
+        &.animate {
+            h2, p, ul {
+                animation: come-up 1.5s ease-in-out both;
+            }
+            .profile-picture {
+                animation: fade-in 2s ease-in-out both;
+            }
+        }
     }
 }
 .profile-picture {
     width: 300px;
     border-radius: 50%;
     margin: 70px;
-    animation: fade-in 2s ease-in-out;
 }
 .content {
     h2, p, ul {
-        margin-top: 120px;
-    }
-    &.animate {
-        h2, p, ul {
-            margin-top: 120px;
-            animation: come-up 1.5s ease-in-out both;
-        }
+        margin-top: 90px;
+        opacity: 0.4;
     }
 }
 ul {
