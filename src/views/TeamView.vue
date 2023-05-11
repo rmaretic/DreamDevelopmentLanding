@@ -34,6 +34,8 @@
 </template>
 <script setup>
 import useElementVisibility from '../helpers/useElementVisibility';
+import SectionHero from '../components/section/SectionHero.vue';
+import { ref } from 'vue';
 
 const firstMember = ref(null);
 const { isTriggered: isFirstMemberVisible } = useElementVisibility(firstMember);
@@ -64,8 +66,8 @@ const { isTriggered: isFirstMemberVisible } = useElementVisibility(firstMember);
             font-weight: 500;
             background: linear-gradient(to right, #C368FF, #6AE6FF);
             background-clip: text;
+            -webkit-background-clip: text;
             color: rgba(255, 255, 255, 0);
-            background-clip: text;
             margin: 0 0 30px;
         }
 

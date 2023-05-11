@@ -14,6 +14,7 @@
     </section>
 </template>
 <script setup>
+import IconsChevronDown from '../icons/IconsChevronDown.vue';
 const props = defineProps({
     title: String,
     description: String,
@@ -43,8 +44,8 @@ const scrollDown = (scrollRef) => {
             font-weight: 500;
             background: linear-gradient(to right, #C368FF, #6AE6FF);
             background-clip: text;
+            -webkit-background-clip: text;
             color: rgba(255, 255, 255, 0);
-            background-clip: text;
             margin: 0 0 30px;
             animation: slide-in-left 1s ease;
         }

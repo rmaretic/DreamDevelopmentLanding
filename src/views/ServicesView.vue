@@ -1,7 +1,4 @@
 <template>
-    <Head>
-        <Title>Dream Development | Services</Title>
-    </Head>
     <SectionHero title="Crafting Digital Dreams into Reality"
         description="Our team of skilled developers and designers are dedicated to bringing your dream project to life with cutting-edge technology and innovative solutions."
         :scroll-ref="dynamicWebApplicationsSectionRef?.articleRef"
@@ -14,12 +11,12 @@
         iconTitle="Powered by"
         type="dark"
         :icons="[
-            {url: 'https://nodejs.org', icon: node},
-            {url: 'https://www.php.net', icon: php},
-            {url: 'https://www.python.org', icon: python},
-            {url: 'https://react.dev', icon: react},
-            {url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', icon: squareJs},
-            {url: 'https://vuejs.org', icon: vuejs},
+            {url: 'https://nodejs.org', icon: IconsNode},
+            {url: 'https://www.php.net', icon: IconsPhp},
+            {url: 'https://www.python.org', icon: IconsPython},
+            {url: 'https://react.dev', icon: IconsReact},
+            {url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', icon: IconsSquareJs},
+            {url: 'https://vuejs.org', icon: IconsVuejs},
         ]"/>
     <SectionDefault
         ref="backendSectionRef"
@@ -29,12 +26,12 @@
         iconTitle="Powered by"
         type="light"
         :icons="[
-            {url: 'https://aws.amazon.com', icon: aws},
-            {url: 'https://www.heroku.com', icon: heroku},
-            {url: 'https://www.postgresql.org', icon: postgresql},
-            {url: 'https://www.mongodb.com', icon: mongodb},
-            {url: 'https://redis.io', icon: redis},
-            {url: 'https://graphql.org', icon: graphql},
+            {url: 'https://aws.amazon.com', icon: IconsAws},
+            {url: 'https://www.heroku.com', icon: IconsHeroku},
+            {url: 'https://www.postgresql.org', icon: IconsPostgresql},
+            {url: 'https://www.mongodb.com', icon: IconsMongodb},
+            {url: 'https://redis.io', icon: IconsRedis},
+            {url: 'https://graphql.org', icon: IconsGraphql},
         ]"/>
     <SectionDefault
         ref="paymentSectionRef"
@@ -43,30 +40,34 @@
         iconTitle="Powered by"
         type="black"
         :icons="[
-            {url: 'https://stripe.com', icon: stripe},
-            {url: 'https://www.paypal.com', icon: paypal},
-            {url: 'https://www.skrill.com', icon: skrill},
+            {url: 'https://stripe.com', icon: IconsStripe},
+            {url: 'https://www.paypal.com', icon: IconsPaypal},
+            {url: 'https://www.skrill.com', icon: IconsSkrill},
         ]"/>
 </template>
 <script setup>
+import SectionHero from '../components/section/SectionHero.vue';
+import SectionDefault from '../components/section/SectionDefault.vue';
 /* Dynamic web application section icons */
-import node from '../components/icons/node';
-import php from '../components/icons/php';
-import python from '../components/icons/python';
-import react from '../components/icons/react';
-import squareJs from '../components/icons/square-js';
-import vuejs from '../components/icons/vuejs';
+import IconsNode from '../components/icons/IconsNode.vue';
+import IconsPhp from '../components/icons/IconsPhp.vue';
+import IconsPython from '../components/icons/IconsPython.vue';
+import IconsReact from '../components/icons/IconsReact.vue';
+import IconsSquareJs from '../components/icons/IconsSquareJs.vue';
+import IconsVuejs from '../components/icons/IconsVuejs.vue';
 /* Backend section icons */
-import aws from '../components/icons/aws';
-import heroku from '../components/icons/heroku';
-import postgresql from '../components/icons/postgresql';
-import mongodb from '../components/icons/mongodb';
-import redis from '../components/icons/redis';
-import graphql from '../components/icons/graphql';
+import IconsAws from '../components/icons/IconsAws.vue';
+import IconsHeroku from '../components/icons/IconsHeroku.vue';
+import IconsPostgresql from '../components/icons/IconsPostgresql.vue';
+import IconsMongodb from '../components/icons/IconsMongodb.vue';
+import IconsRedis from '../components/icons/IconsRedis.vue';
+import IconsGraphql from '../components/icons/IconsGraphql.vue';
 /* Payment providers section icons */
-import stripe from '../components/icons/stripe';
-import paypal from '../components/icons/paypal';
-import skrill from '../components/icons/skrill';
+import IconsStripe from '../components/icons/IconsStripe.vue';
+import IconsPaypal from '../components/icons/IconsPaypal.vue';
+import IconsSkrill from '../components/icons/IconsSkrill.vue';
+
+import { ref } from 'vue';
 
 const dynamicWebApplicationsSectionRef = ref(null);
 const backendSectionRef = ref(null);

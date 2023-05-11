@@ -1,7 +1,4 @@
 <template>
-    <Head>
-        <Title>Dream Development | Blog</Title>
-    </Head>
     <SectionHero
         title="Unleashing the Power of Code."
         description="In our blog section, we delve into the latest trends and techniques in software development, sharing our team's knowledge and experience with our readers. From practical tips and tutorials to industry news and updates, we cover a wide range of topics to help you stay on top of your game. Join us on the journey to build better software and drive your success."
@@ -16,6 +13,10 @@
     />
 </template>
 <script setup>
+import SectionHero from '../components/section/SectionHero.vue';
+import SectionDefault from '../components/section/SectionDefault.vue';
+import { ref } from 'vue';
+
 const introRef = ref(null);
 </script>
 <style lang="scss" scoped>

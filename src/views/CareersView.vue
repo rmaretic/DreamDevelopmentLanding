@@ -1,7 +1,4 @@
 <template>
-    <Head>
-        <Title>Dream Development | Careers</Title>
-    </Head>
     <SectionHero
         title="Unlock Your Potential, Discover Your Dream with Us."
         description="Explore our opportunities and take the first step towards a fulfilling and successful career."
@@ -16,6 +13,9 @@
     />
 </template>
 <script setup>
-const openApplicationRef = ref(null);
+import SectionHero from '../components/section/SectionHero.vue';
+import SectionDefault from '../components/section/SectionDefault.vue';
+import { ref } from 'vue';
 
+const openApplicationRef = ref(null);
 </script>

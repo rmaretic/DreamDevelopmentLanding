@@ -25,7 +25,9 @@
     </section>
 </template>
 <script setup>
+import UiScrollDown from '../ui/UiScrollDown.vue';
 import useElementVisibility from '../../helpers/useElementVisibility';
+import { ref, defineExpose } from 'vue';
 
 const articleRef = ref(null)
 defineExpose({articleRef})
@@ -65,15 +67,15 @@ section {
                 font-weight: 500;
                 background: linear-gradient(to right, #C368FF, #6AE6FF);
                 background-clip: text;
+                -webkit-background-clip: text;
                 color: rgba(255, 255, 255, 0);
-                background-clip: text;
                 margin: 0 0 30px;
             }
             h3 {
                 background: linear-gradient(to right, #C368FF, #6AE6FF);
                 background-clip: text;
+                -webkit-background-clip: text;
                 color: rgba(255, 255, 255, 0);
-                background-clip: text;
                 font-size: 32px;
             }
             p {
